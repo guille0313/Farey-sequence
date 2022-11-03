@@ -24,7 +24,8 @@ def main():
     while True:
         try:
             new_f = [min_f[0] + max_f[0], min_f[1] + max_f[1]]
-            print(f"{new_f[0]:>5}/{new_f[1]:<5} = {new_f[0]/new_f[1]:<5.3} | {n}")
+            out_txt = "{{new_f[0]:>5}}/{{new_f[1]:<5}} = {{new_f[0]/new_f[1]:<{0}.3}} | {{n}}".format(len(str(n))+1)
+            print()  # {new_f[0]:>5}/{new_f[1]:<5} = {new_f[0]/new_f[1]:<5.3} | {n}")
             if n == new_f[0]/new_f[1]:
                 break
             elif n > new_f[0]/new_f[1]:
